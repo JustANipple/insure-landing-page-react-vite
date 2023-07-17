@@ -1,0 +1,31 @@
+.top_bar {
+    padding: var(--mobile-pad-b) var(--mobile-pad-i);
+    height: var(--top-bar-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.menu_btn {
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.open {
+    padding: var(--mobile-pad-b) var(--mobile-pad-i);
+    height: calc(100vh - var(--top-bar-height));
+}
+
+@media screen and (min-width: 1024px) {
+    .top_bar {
+        padding: var(--desktop-pad-b) var(--desktop-pad-i);
+        height: fit-content;
+    }
+
+    .menu_btn {
+        display: none;
+    }
+}

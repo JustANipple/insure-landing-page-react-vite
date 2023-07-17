@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+/* == Custom properties == */
+:root {
+    /* = Colors = */
+    /* Primary */
+    --dark-violet: hsl(256, 26%, 20%);
+    --grayish-blue: hsl(216, 30%, 68%);
+    /* Neutral */
+    --very-dark-violet: hsl(270, 9%, 17%);
+    --dark-grayish-violet: hsl(273, 4%, 51%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    /* = Font = */
+    --ff-display: 'DM Serif Display', serif;
+    --ff-karla: 'Karla', sans-serif;
+    --fw-karla-bold: 700;
+    --fs: 1rem;
+    /* = Spacing = */
+    --top-bar-height: 5rem;
+
+    --mobile-pad-b: 1.5rem;
+    --mobile-pad-i: 1.5rem;
+
+    --desktop-pad-b: 1.5rem;
+    --desktop-pad-i: 10.5rem;
+}
+
+/* == Global styling == */
+#root {
+  display: grid;
+  row-gap: 8.75rem;
+}
+
+body {
+  font-family: var(--ff-karla);
+  font-size: var(--fs);
+}

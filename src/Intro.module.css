@@ -1,0 +1,139 @@
+.intro_img {
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.intro {
+    background: var(--dark-violet);
+}
+
+.intro_content {
+    color: white;
+    text-align: center;
+    padding: calc(var(--desktop-pad-b) * 4) var(--mobile-pad-i);
+    display: grid;
+    row-gap: 1rem;
+    justify-items: center;
+    position: relative;
+}
+
+.intro_content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:
+        url("../public/images/bg-pattern-intro-left-mobile.svg") no-repeat;
+    width: 10.5rem;
+    height: 10.5rem;
+}
+
+.intro_content::after {
+    --after-img-height: 20.5rem;
+    content: "";
+    position: absolute;
+    width: 8rem;
+    height: var(--after-img-height);
+    right: 0;
+    bottom: calc(var(--after-img-height) / -2);
+    background:
+        url("../public/images/bg-pattern-intro-right-mobile.svg") no-repeat;
+}
+
+.title {
+    font-family: var(--ff-display);
+    font-size: calc(var(--fs) * 2.875);
+    font-weight: 400;
+    line-height: 1;
+    position: relative;
+}
+
+.description {
+    line-height: 1.75;
+    max-width: 70ch;
+}
+
+.view_plans_btn {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: .375rem 2rem;
+    margin-block-start: .75rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+    .intro {
+        background-color: var(--dark-violet);
+        padding-inline: var(--desktop-pad-i);
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        position: relative;
+    }
+
+    .intro_img {
+        flex: 1;
+        position: relative;
+        top: 6rem;
+    }
+
+    .intro_content {
+        position: unset;
+        text-align: left;
+        justify-items: flex-start;
+        padding-block: 1.5rem 3rem;
+        padding-inline: 0;
+        row-gap: 1rem;
+        flex: 1;
+    }
+
+    .intro_content::before {
+        left: unset;
+        right: 0;
+        --before-img-height: 37rem;
+        background:
+            url("../public/images/bg-pattern-intro-right-desktop.svg") no-repeat;
+        width: 27.5rem;
+        height: var(--before-img-height);
+        right: 0;
+    }
+
+    .intro_content::after {
+        --after-img-height: 31.25rem;
+        background: 
+            url("../public/images/bg-pattern-intro-left-desktop.svg") no-repeat;
+        width: 12.25rem;
+        height: var(--after-img-height);
+        left: 0;
+        bottom: calc(var(--after-img-height) / -1.5);
+    }
+
+    .title {
+        font-family: var(--ff-display);
+        font-size: calc(var(--fs) * 4.25);
+        padding-right: 3rem;
+    }
+
+    .title::before {
+        content: "";
+        position: absolute;
+        border: 1px solid white;
+        width: 9.5rem;
+        top: calc(var(--desktop-pad-b) * -2.75);
+    }
+
+    .view_plans_btn {
+        margin-block-start: .5rem;
+        font-weight: var(--fw-karla-bold);
+        transition: all .125s ease-in-out;
+    }
+
+    .view_plans_btn:hover {
+        background-color: white;
+        color: var(--dark-violet);
+        cursor: pointer;
+    }
+}
