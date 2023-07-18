@@ -18,7 +18,7 @@ const Nav = () => {
     ]
 
     const listOptions = options.map((option) => {
-        return <li key={option.id}> <a href="#">{option.text}</a> </li>
+        return <li key={option.id}> <a href="#" className={styles.option}>{option.text}</a> </li>
     })
 
   return (

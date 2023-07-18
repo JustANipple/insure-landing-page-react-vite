@@ -1,24 +1,27 @@
+import styles from "./Features.module.css"
+
 const Features = () => {
 
     // eslint-disable-next-line react/prop-types
     function IconTitleText({ icon, title, text }) {
         return (
-            <div className="feature">
+            <div className={styles.feature}>
                 <img 
                     src={icon} 
                     alt=""
                     aria-hidden="true" 
+                    className={styles.icon}
                 />
-                <p className="title">{title}</p>
-                <p className="description">{text}</p>
+                <p className={styles.subtitle}>{title}</p>
+                <p className={styles.description}>{text}</p>
             </div>
         );
     }
 
     return (
-        <section className="features">
-            <h2 className="title">We're different</h2>
-            <div className="wrapper">
+        <section className={styles.features}>
+            <h2 className={styles.title}>We're different</h2>
+            <div className={styles.wrapper}>
                 <IconTitleText 
                     icon={"images/icon-snappy-process.svg"}
                     title={"Snappy Process"}
@@ -44,7 +47,5 @@ const Features = () => {
         </section>
     )
 }
-
-
 
 export default Features

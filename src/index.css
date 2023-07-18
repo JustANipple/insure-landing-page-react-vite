@@ -47,7 +47,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --top-bar-height: 5rem;
 
     --mobile-pad-b: 1.5rem;
-    --mobile-pad-i: 1.5rem;
+    --mobile-pad-i: 1.75rem;
 
     --desktop-pad-b: 1.5rem;
     --desktop-pad-i: 10.5rem;
@@ -56,10 +56,24 @@ p, h1, h2, h3, h4, h5, h6 {
 /* == Global styling == */
 #root {
   display: grid;
-  row-gap: 8.75rem;
+  row-gap: 8.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--ff-karla);
   font-size: var(--fs);
+}
+
+.lockScroll {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  #root {
+    row-gap: 8rem;
+  }
 }

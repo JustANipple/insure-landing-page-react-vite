@@ -1,0 +1,129 @@
+.footer {
+    padding: calc(var(--mobile-pad-b) * 3.75) var(--mobile-pad-i);
+    background-color: var(--very-light-gray);
+    display: grid;
+    justify-items: center;
+    row-gap: 2.25rem;
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: 
+        url("images/bg-pattern-footer-mobile.svg")
+        no-repeat
+        top left;
+    pointer-events: none;
+}
+
+.head {
+    display: grid;
+    justify-items: center;
+    row-gap: 2rem;
+    position: relative;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+hr {
+    width: 100%;
+    opacity: 30%;
+}
+
+.more {
+    display: grid;
+    row-gap: 1.5rem;
+}
+
+.more_list {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: var(--fw-karla-bold);
+    font-size: calc(var(--fs) / 1.05);
+}
+
+.title {
+    color: var(--dark-grayish-violet);
+    margin-block-end: 1.75rem;
+}
+
+.item {
+    margin: 0;
+    padding: 0;
+    margin-block-end: .5rem;
+}
+
+.redirect {
+    text-decoration: none;
+    color: var(--very-light-violet);
+    position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        padding: calc(var(--desktop-pad-b) * 3.5) var(--desktop-pad-i);
+        justify-items: unset;
+        row-gap: 2.5rem;
+    }
+
+    .footer::before {
+        background: 
+            url("/images/bg-pattern-footer-desktop.svg")
+            no-repeat
+            top left;
+    }
+
+    .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .social {
+        transition: filter .125s ease-in-out;
+    }
+
+    .social:hover {
+        filter: 
+            brightness(0)
+            invert(12%) sepia(6%) saturate(1505%) hue-rotate(227deg) brightness(93%) contrast(89%);
+    }
+
+    .more {
+        display: flex;
+        position: relative;
+    }
+
+    .more_list {
+        text-align: left;
+        flex: 1;
+    }
+    
+    .redirect::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-top: 1px solid var(--dark-grayish-violet);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .125s ease-in-out;
+    }
+
+    .redirect:hover::after {
+        transform: scaleX(1);
+    }
+}

@@ -1,0 +1,78 @@
+.findout {
+    padding: calc(var(--mobile-pad-b) * 3) var(--mobile-pad-i);
+    margin-inline: 1.5rem;
+    display: grid;
+    row-gap: 2rem;
+    background-color: var(--dark-violet);
+    color: white;
+    position: relative;
+}
+
+.findout::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background: 
+        url("/images/bg-pattern-how-we-work-mobile.svg")
+        no-repeat
+        top right;
+}
+
+.title {
+    font-family: var(--ff-display);
+    font-weight: 400;
+    text-align: center;
+    font-size: calc(var(--fs) * 2.5);
+    line-height: 1;
+    position: relative;
+}
+
+.btn {
+    padding: .5rem 1.25rem;
+    background-color: transparent;
+    border: 1px solid white;
+    text-transform: uppercase;
+    color: inherit;
+    margin-inline: auto;
+    font-weight: var(--fw-karla-bold);
+}
+
+@media screen and (min-width: 1024px) {
+    .findout {
+        padding: 4.5rem 5rem;
+        margin-inline: var(--desktop-pad-i);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .findout::before {
+        background: 
+            url("/images/bg-pattern-how-we-work-desktop.svg")
+            no-repeat
+            top right;
+    }
+
+    .title {
+        font-size: calc(var(--fs) * 3.5);
+        text-align: left;
+        max-width: 17.5ch;
+    }
+
+    .btn {
+        margin-inline: auto 0;
+        position: relative;
+        transition: all .125s ease-in-out;
+    }
+
+    .btn:hover {
+        background-color: white;
+        color: var(--dark-violet);
+        cursor: pointer;
+    }
+}
