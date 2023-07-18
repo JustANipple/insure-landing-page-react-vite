@@ -25,8 +25,8 @@ const Nav = () => {
     <nav className={styles.nav}>
         <ul className={styles.list}>
             {listOptions}
-            <button className={styles.view_plans_btn_bar}>View plans</button>
         </ul>
+        <button className={styles.view_plans_btn_bar}>View plans</button>
     </nav>
   )
 }

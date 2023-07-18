@@ -1,5 +1,5 @@
 .footer {
-    padding: calc(var(--mobile-pad-b) * 3.75) var(--mobile-pad-i);
+    padding: calc(var(--mobile-pad-b) * 4) var(--mobile-pad-i);
     background-color: var(--very-light-gray);
     display: grid;
     justify-items: center;
@@ -42,7 +42,7 @@ hr {
 
 .more {
     display: grid;
-    row-gap: 1.5rem;
+    row-gap: 1.75rem;
 }
 
 .more_list {

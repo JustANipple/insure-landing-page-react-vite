@@ -31,6 +31,7 @@
 }
 
 .view_plans_btn_bar {
+    font-size: calc(var(--fs) * 1.475);
     border: 1px solid white;
     text-transform: uppercase;
     font-weight: var(--fw-karla-bold);
@@ -50,6 +51,8 @@
         position: unset;
         background: unset;
         height: unset;
+        display: flex;
+        gap: 1.5rem;
     }
 
     .list {
@@ -73,6 +76,7 @@
     }
 
     .view_plans_btn_bar {
+        font-size: var(--fs);
         color: var(--very-dark-violet);
         border: 2px solid var(--very-dark-violet);
         padding: calc(var(--mobile-pad-b) / 3.75) var(--mobile-pad-i);

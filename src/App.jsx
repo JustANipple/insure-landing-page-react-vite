@@ -12,8 +12,10 @@ function App() {
         <Bar />
         <Intro />
       </header>
-      <Features />
-      <Findout />
+      <main>
+        <Features />
+        <Findout />
+      </main>
       <Footer />
     </>
   )

@@ -72,6 +72,11 @@ body {
   overflow: hidden;
 }
 
+main {
+  display: grid;
+  row-gap: 8rem;
+}
+
 @media screen and (min-width: 1024px) {
   #root {
     row-gap: 8rem;

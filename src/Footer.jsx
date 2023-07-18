@@ -86,7 +86,7 @@ const Footer = () => {
                         className={styles.more_list} 
                         key={list.id}
                     >
-                        <p className={styles.title}>{list.title}</p>
+                        <li className={styles.title}>{list.title}</li>
                         {list.links.map((linkTxt) => {
                             return (
                                 <li 
